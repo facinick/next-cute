@@ -6,7 +6,7 @@ import { Badge } from "./ui/badge";
 
 export default function DBHealth() {
 
-  const { data, error, isLoading } = useSWR('/api/db-health', fetcher)
+  const { error, isLoading } = useSWR('/api/db-health', fetcher)
 
   if (isLoading) {
     return <Badge variant="destructive">loading</Badge>
